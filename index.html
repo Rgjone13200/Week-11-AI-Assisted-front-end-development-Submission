@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoRise</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-neutral-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-3xl font-bold text-green-600">EcoRise</h1>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-lg font-medium">
+        <a href="#about" class="hover:text-green-600 transition">About</a>
+        <a href="#programs" class="hover:text-green-600 transition">Programs</a>
+        <a href="#events" class="hover:text-green-600 transition">Events</a>
+        <a href="#resources" class="hover:text-green-600 transition">Resources</a>
+        <a href="#donate" class="bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition">Donate</a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden text-gray-800 text-3xl focus:outline-none" aria-label="Toggle Menu">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <nav class="flex flex-col px-4 py-4 space-y-3 text-lg font-medium">
+        <a href="#about" class="hover:text-green-600 transition">About</a>
+        <a href="#programs" class="hover:text-green-600 transition">Programs</a>
+        <a href="#events" class="hover:text-green-600 transition">Events</a>
+        <a href="#resources" class="hover:text-green-600 transition">Resources</a>
+        <a href="#donate" class="bg-red-500 text-white px-5 py-2 rounded-full text-center hover:bg-red-600 transition">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-green-600 leading-tight mb-4">
+          Inspire Eco-conscious changemakers
+        </h2>
+        <p class="text-xl text-gray-700 mb-6 max-w-xl">
+          Are you ready to make a change and join EcoRise so that you can pursue a more eco-friendly world and make a real difference?
+        </p>
+        <button id="openModal"
+          class="bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition">
+          Join the Movement
+        </button>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <img
+          src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1200&q=80"
+          alt="Volunteers cleaning a park"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission / Content Cards -->
+  <section id="about" class="py-12">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-gray-300 rounded-xl p-8 shadow-sm">
+        <h3 class="text-4xl font-extrabold text-green-600 mb-4">EcoRise mission</h3>
+        <p class="text-2xl leading-relaxed text-gray-700">
+          EcoRise is a Seattle-based nonprofit dedicated to empowering people and neighborhoods to live more sustainably through education, hands-on experiences, and community-led action.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?auto=format&fit=crop&w=900&q=80"
+          alt="Plant growing from soil"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs / Local Impact -->
+  <section id="programs" class="pb-12">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-6 items-start">
+      <div class="lg:col-span-2 bg-white rounded-xl p-8 shadow-sm">
+        <h3 class="text-4xl font-extrabold text-green-600 mb-4">Local impact</h3>
+        <p class="text-2xl leading-relaxed text-gray-700 mb-6">
+          Together we co-host workshops, support volunteer projects, and share resources that help neighborhoods reduce waste, conserve energy, and build healthier local ecosystems.
+        </p>
+        <button class="bg-red-500 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-red-600 transition">
+          Explore Programs
+        </button>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl shadow-sm p-4 flex items-start gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Volunteer testimonial"
+            class="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h4 class="font-bold text-gray-800">Mark T.</h4>
+            <p class="text-sm text-gray-600">
+              “EcoRise inspired me to help my community through sustainability and local action.”
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm p-4 flex items-start gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Volunteer testimonial"
+            class="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h4 class="font-bold text-gray-800">Lily S.</h4>
+            <p class="text-sm text-gray-600">
+              “Their workshops made eco-friendly habits feel practical, welcoming, and easy to start.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved Cards -->
+  <section id="events" class="pb-12">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2 bg-gray-300 rounded-xl p-8 shadow-sm">
+        <h3 class="text-4xl font-extrabold text-green-600 mb-3">Get involved</h3>
+        <p class="text-2xl text-gray-700 mb-6">
+          Are you ready to join our community of eco-conscious changemakers?
+        </p>
+        <a href="#resources"
+          class="inline-block bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition">
+          Explore Programs
+        </a>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80"
+          alt="Young environmental volunteer"
+          class="w-full h-full object-cover min-h-[280px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Cards -->
+  <section id="resources" class="pb-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-green-600 mb-8 text-center">Our Focus Areas</h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-1 transition">
+          <h4 class="text-2xl font-bold mb-3">Education</h4>
+          <p class="text-gray-600">
+            Learn practical sustainability through community workshops, guides, and youth programs.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-1 transition">
+          <h4 class="text-2xl font-bold mb-3">Volunteer Work</h4>
+          <p class="text-gray-600">
+            Join cleanup events, neighborhood projects, and local environmental improvement efforts.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-1 transition">
+          <h4 class="text-2xl font-bold mb-3">Community Support</h4>
+          <p class="text-gray-600">
+            Access shared resources that help families and communities build greener daily habits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="donate" class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h4 class="text-3xl font-bold text-green-400 mb-2">EcoRise</h4>
+        <p class="text-gray-300">
+          Inspiring eco-conscious changemakers through community action, education, and sustainability.
+        </p>
+      </div>
+      <div class="md:text-right">
+        <a href="#"
+          class="inline-block bg-red-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-600 transition">
+          Donate Today
+        </a>
+        <p class="text-sm text-gray-400 mt-4">© 2026 EcoRise. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="infoModal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50 px-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
+      <button id="closeModal"
+        class="absolute top-4 right-4 text-2xl text-gray-500 hover:text-gray-800"
+        aria-label="Close Modal">
+        &times;
+      </button>
+
+      <h3 class="text-3xl font-bold text-green-600 mb-4">Join EcoRise</h3>
+      <p class="text-gray-700 text-lg mb-6">
+        Become part of a growing community that supports sustainability, education, and local impact.
+        Sign up to hear about events, volunteer opportunities, and resources.
+      </p>
+      <button class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">
+        Get Started
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
